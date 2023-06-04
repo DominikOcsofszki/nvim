@@ -33,6 +33,23 @@ require('lazy').setup({
 'junegunn/fzf.vim',
     'folke/todo-comments.nvim',
 
+ "luukvbaal/nnn.nvim",
+ 'edluffy/hologram.nvim',
+ -- {  "luukvbaal/nnn.nvim",
+  -- config = function() require("nnn").setup() end
+-- },
+
+--   require("nnn").setup({
+--   picker = {
+--     cmd = "tmux new-session nnn -Pp",
+--     style = { border = "rounded" },
+--     session = "shared",
+--   },
+--   replace_netrw = "picker",
+--   windownav = "<C-l>"
+-- })
+
+
     {'akinsho/flutter-tools.nvim',
     lazy = false,
     dependencies = {
