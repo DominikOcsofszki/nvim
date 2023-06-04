@@ -17,7 +17,10 @@ vim.keymap.set('n', '[+', require('harpoon.ui').nav_prev, {desc = "prev Harpoon"
 --vim.keymap.set('n', '[to', require('nvim-tree.api').tree.open, {desc = "Tree open"})
 --vim.keymap.set('n', '[tt', require('nvim-tree.api').tree.toggle, {desc = "Tree toggle"})
 vim.keymap.set('n', '<C-s>', require('nvim-tree.api').tree.toggle, {desc = "Tree toggle"})
-vim.keymap.set('n', '<C-0>', require('nvim-tree.api').tree.toggle, {desc = "Tree toggle"})
+-- vim.keymap.set('n', '<C-0>', require('nnn')., {desc = "Nnn"})
+-- vim.keymap.set('n', '<C-0>', require('nnn').builtin.open_in_preview, {desc = "Nnn"})
+vim.keymap.set('n', '<C-0>', require('nnn').builtin.open_in_preview, {desc = "Nnn"})
+-- { "<C-p>", builtin.open_in_preview }
 --nvim-tree-api.tree.open()
 
 
