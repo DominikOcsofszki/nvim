@@ -1,5 +1,5 @@
 
-vim.keymap.set('n','\\',':w<enter',{})
+-- vim.keymap.set('n','\\',':w<enter',{})
 
 vim.o.termguicolors = true
 -- vim.o.relativenumber = true

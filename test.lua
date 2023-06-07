@@ -1,4 +1,4 @@
-local source = '~/Dev/IdeaProjects/mlp/output.png'
+local source = '$HOME/Dev/IdeaProjects/mlp/output.png'
 local buf = vim.api.nvim_get_current_buf()
 local image = require('hologram.image'):new(source, {})
 

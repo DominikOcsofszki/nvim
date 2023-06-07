@@ -7,12 +7,6 @@ vim.g.maplocalleader = ' '
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require('setup-lazy')
-require('settings')
-require('keybindings')
-require('setup-telescope')
-require('setup-lsp')
---require('setup-rest')
---
-require('set-up')
-
+require('setup.init-lazy')
+require('setup.init-setup')
+require('settings.init-settings')

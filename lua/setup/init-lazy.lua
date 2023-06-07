@@ -35,6 +35,20 @@ require('lazy').setup({
 
  "luukvbaal/nnn.nvim",
  'edluffy/hologram.nvim',
+  {'goolord/alpha-nvim', 
+    dependencies = {'nvim-tree/nvim-web-devicons'}
+    ,config = function ()
+      require('alpha').setup(require('alpha.themes.startify').config)
+    end
+  },
+
+
+
+
+
+
+
+
  -- {  "luukvbaal/nnn.nvim",
   -- config = function() require("nnn").setup() end
 -- },
@@ -56,13 +70,29 @@ require('lazy').setup({
         'nvim-lua/plenary.nvim',
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },},
+-- {
+--   "folke/noice.nvim",
+--   config = function()
+--     require("noice").setup({})
+--   end,
+--   dependencies = {
+--     "MunifTanjim/nui.nvim",
+--     "rcarriga/nvim-notify",
+--     }
+-- },
+  -- lazy.nvim
 {
   "folke/noice.nvim",
-  config = function()
-    require("noice").setup({})
-  end,
+  event = "VeryLazy",
+  opts = {
+    -- add any options here
+  },
   dependencies = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
     "MunifTanjim/nui.nvim",
+    -- OPTIONAL:
+    --   `nvim-notify` is only needed, if you want to use the notification view.
+    --   If not available, we use `mini` as the fallback
     "rcarriga/nvim-notify",
     }
 },
