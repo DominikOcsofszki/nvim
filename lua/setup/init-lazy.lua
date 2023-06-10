@@ -32,7 +32,9 @@ require('lazy').setup({
 'christoomey/vim-tmux-navigator',
 'junegunn/fzf.vim',
     'folke/todo-comments.nvim',
-
+-- Lua
+{"folke/zen-mode.nvim",
+  opts = {  }},
  "luukvbaal/nnn.nvim",
  'edluffy/hologram.nvim',
   {'goolord/alpha-nvim', 
@@ -42,27 +44,9 @@ require('lazy').setup({
     end
   },
 
-
-
-
-
-
-
-
- -- {  "luukvbaal/nnn.nvim",
-  -- config = function() require("nnn").setup() end
--- },
-
---   require("nnn").setup({
---   picker = {
---     cmd = "tmux new-session nnn -Pp",
---     style = { border = "rounded" },
---     session = "shared",
---   },
---   replace_netrw = "picker",
---   windownav = "<C-l>"
--- })
-
+'neovim/nvim-lspconfig',
+'jose-elias-alvarez/null-ls.nvim',
+'MunifTanjim/prettier.nvim',
 
     {'akinsho/flutter-tools.nvim',
     lazy = false,
@@ -70,17 +54,6 @@ require('lazy').setup({
         'nvim-lua/plenary.nvim',
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },},
--- {
---   "folke/noice.nvim",
---   config = function()
---     require("noice").setup({})
---   end,
---   dependencies = {
---     "MunifTanjim/nui.nvim",
---     "rcarriga/nvim-notify",
---     }
--- },
-  -- lazy.nvim
 {
   "folke/noice.nvim",
   event = "VeryLazy",
@@ -149,8 +122,8 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
-        theme = 'onedark',
+        icons_enabled = true,
+        -- theme = 'onedark',
         component_separators = '|',
         section_separators = '',
       },

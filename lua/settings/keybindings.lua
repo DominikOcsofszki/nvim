@@ -35,6 +35,7 @@ vim.keymap.set('n', '<DOWN>','5j zz',{})
 vim.keymap.set('n', '<RIGHT>','5l zz',{})
 vim.keymap.set('n', '<LEFT>','5h zz',{})
 vim.keymap.set('n','\\',':w<enter>',{})
+-- vim.keymap.set('n','\\',':w<enter>',{})
 vim.keymap.set('n','|',':q<enter>',{})
 
 vim.keymap.set('n' ,'<c-j>','5j',{})
