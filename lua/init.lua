@@ -7,6 +7,6 @@ vim.g.maplocalleader = ' '
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require('setup.init-lazy')
+require('init-lazy')
 require('setup.init-setup')
 require('settings.init-settings')
