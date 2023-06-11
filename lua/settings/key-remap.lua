@@ -1,13 +1,16 @@
 
+
+
+-- Clipboard changed: e.g. "_ or "p
 vim.keymap.set('n' ,'cw','"_ciw',{})
 vim.keymap.set('n' ,'ciW','"_ciW',{})
 vim.keymap.set('n' ,'ci','"_ci',{})
 vim.keymap.set('n' ,'x','"_x',{})
+vim.keymap.set('n', 'Y','"pyy"pp',{})
 
 
 
 vim.keymap.set('n', '<leader>S',':w<enter>',{desc = "save file"})
-vim.keymap.set('n', 'Y','yyp',{})
 vim.keymap.set('n', '<UP>','10k zz',{})
 vim.keymap.set('n', '<DOWN>','10j zz',{})
 vim.keymap.set('n', '<RIGHT>','10l zz',{})

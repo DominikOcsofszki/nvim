@@ -6,6 +6,7 @@ require("setup.setup-nnn")
 require('setup.setup-noice')
 require('setup.setup-nvimtree')
 require('setup.setup-telescope')
+require('setup.setup-treesitter')
 
 -- setup
 require("lualine").setup{}

@@ -20,7 +20,7 @@ dashboard.section.buttons.val = {
     dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
     dashboard.button( "s", "  > Settings" , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
     dashboard.button( "a", "  > Settings-startup-alpha" , ":e $HOME_CONFIG/nvim/lua/setup/setup-alpha.lua | :cd %:p:h | split . | wincmd k | pwd<CR>"),
-    dashboard.button( "k", "  > Settings: Kitty" , ":e $HOME_CONFIG/Kitty/kitty.conf | :cd %:p:h<CR>"),
+    dashboard.button( "k", "  > Settings: Kitty" , ":e $HOME_CONFIG/Kitty/kitty.conf|:2357 | :cd %:p:h<CR>"),
     -- dashboard.button( "k", "  > Settings: Kitty" , ":e $HOME_CONFIG/Kitty/kitty.conf | :cd %:p:h | split . | wincmd k | pwd<CR>"),
 }
 
