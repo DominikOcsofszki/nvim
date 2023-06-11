@@ -33,17 +33,19 @@ require('lazy').setup({
 'junegunn/fzf.vim',
     'folke/todo-comments.nvim',
 -- Lua
+{'edluffy/hologram.nvim'},
 {"folke/zen-mode.nvim",
   opts = {  }},
  "luukvbaal/nnn.nvim",
  'edluffy/hologram.nvim',
-  {'goolord/alpha-nvim', 
+  {'goolord/alpha-nvim',
     dependencies = {'nvim-tree/nvim-web-devicons'}
     ,config = function ()
       require('alpha').setup(require('alpha.themes.startify').config)
     end
   },
 
+{ "rafamadriz/friendly-snippets" },
 'neovim/nvim-lspconfig',
 'jose-elias-alvarez/null-ls.nvim',
 'MunifTanjim/prettier.nvim',
@@ -107,19 +109,15 @@ require('lazy').setup({
   },
 { -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
     opts = {
       char = '┊',
       show_trailing_blankline_indent = false,
     },
   },
 
-  -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
  { -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
     opts = {
       options = {
         icons_enabled = true,
@@ -129,17 +127,11 @@ require('lazy').setup({
       },
     },
   },
-  -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
-
-
   ----------------------------------
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
 
-  -- Fuzzy Finder Algorithm which requires local dependencies to be built.
-  -- Only load if `make` is available. Make sure you have the system
-  -- requirements installed.
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     -- NOTE: If you are having trouble with this installation,
@@ -160,10 +152,4 @@ require('lazy').setup({
     end,
   },
   ----------------------------------
- 
-
-
-
-
-
-}) 
+})
