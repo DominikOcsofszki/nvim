@@ -7,11 +7,6 @@ vim.keymap.set('n', '<C-s>', require('nvim-tree.api').tree.toggle, {desc = "Tree
 vim.keymap.set('n', '<C-0>', require('nnn').builtin.open_in_preview, {desc = "Nnn"})
 
 
--- Remap for dealing with word wrap
--- vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
--- vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
-
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
