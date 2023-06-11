@@ -35,6 +35,7 @@ require('lazy').setup({
 -- Lua
 {'edluffy/hologram.nvim'},
 {"folke/zen-mode.nvim",
+    { "lukas-reineke/indent-blankline.nvim" },
   opts = {  }},
  "luukvbaal/nnn.nvim",
  'edluffy/hologram.nvim',
@@ -46,9 +47,7 @@ require('lazy').setup({
   },
 
 { "rafamadriz/friendly-snippets" },
-'neovim/nvim-lspconfig',
-'jose-elias-alvarez/null-ls.nvim',
-'MunifTanjim/prettier.nvim',
+-- 'neovim/nvim-lspconfig',
 
     {'akinsho/flutter-tools.nvim',
     lazy = false,
