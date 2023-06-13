@@ -10,11 +10,10 @@ vim.keymap.set('n', 'Y','"pyy"pp',{})
 
 
 
-vim.keymap.set('n', '<leader>S',':w<enter>',{desc = "save file"})
-vim.keymap.set('n', '<UP>','10k zz',{})
-vim.keymap.set('n', '<DOWN>','10j zz',{})
-vim.keymap.set('n', '<RIGHT>','10l zz',{})
-vim.keymap.set('n', '<LEFT>','10h zz',{})
+-- vim.keymap.set('n', '<UP>','10k zz',{})
+-- vim.keymap.set('n', '<DOWN>','10j zz',{})
+-- vim.keymap.set('n', '<RIGHT>','10l zz',{})
+-- vim.keymap.set('n', '<LEFT>','10h zz',{})
 vim.keymap.set('n','\\',':w<enter>',{})
 -- vim.keymap.set('n','\\',':w<enter>',{})
 vim.keymap.set('n','|',':q<enter>',{})

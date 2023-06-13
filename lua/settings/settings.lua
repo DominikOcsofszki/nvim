@@ -10,6 +10,7 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.cursorline = true
+vim.o.cursorlineopt = "number"
 vim.o.clipboard = "unnamedplus"
 vim.o.signcolumn ="yes"
 --vim.cmd.co
@@ -20,9 +21,12 @@ vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = 'menuone,preview'
+-- vim.o.completeopt = 'menuone,noselect'
 --vim.o.
-vim.o.so = 15
+vim.o.so = 10
+-- vim.o.so = 30
 vim.o.tabstop = 4
 
-
+-- vim.g.tex_flavor='latex'
+-- vim.g.vimtex_view_method='skim'
