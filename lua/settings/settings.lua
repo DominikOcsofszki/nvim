@@ -22,7 +22,7 @@ vim.o.timeoutlen = 300
 
 vim.o.completeopt = 'menuone,noselect'
 --vim.o.
-vim.o.so = 9
+vim.o.so = 15
 vim.o.tabstop = 4
 
 

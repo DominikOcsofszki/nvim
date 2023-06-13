@@ -20,7 +20,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
- 'rebelot/kanagawa.nvim',
+ 
+'lervag/vimtex',
+
+  'rebelot/kanagawa.nvim',
+
 'edluffy/hologram.nvim',
 'nvim-treesitter/nvim-treesitter-refactor',
 'BurntSushi/ripgrep',
@@ -45,6 +49,8 @@ require('lazy').setup({
       require('alpha').setup(require('alpha.themes.startify').config)
     end
   },
+  'rebelot/kanagawa.nvim',
+'vimwiki/vimwiki',
 
 { "rafamadriz/friendly-snippets" },
 -- 'neovim/nvim-lspconfig',

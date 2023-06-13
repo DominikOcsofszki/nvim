@@ -8,7 +8,7 @@ require("nvim-tree").setup({
 
 
       renderer = {
-        highlight_opened_files = "none",
-        highlight_modified = "none",
+        highlight_opened_files = "icon",
+        highlight_modified = "icon",
       },
 })
