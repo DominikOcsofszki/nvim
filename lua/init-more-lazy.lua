@@ -1,4 +1,4 @@
-
+--
 
 --
 --
@@ -21,8 +21,8 @@
 -- running it here does not work! only the first one lazy is loading!!!
 require('lazy').setup({
 
-{'preservim/vim-pencil'},
-'lervag/vimtex'
+-- {'preservim/vim-pencil'},
+-- 'lervag/vimtex'
 })
 
 

@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
 if not vim.loop.fs_stat(lazypath) then
@@ -20,11 +14,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
- 
-'lervag/vimtex',
 
+-- 'lervag/vimtex',
+{
+    "lervag/vimtex",
+    lazy=false
+    -- ft = "tex", -- without ft, it's not working too
+    -- config = function()
+    --   vim.cmd("call vimtex#init()")
+    -- end,
+  },
+  {"preservim/tagbar"},
+  {},
   'rebelot/kanagawa.nvim',
-
 'edluffy/hologram.nvim',
 'nvim-treesitter/nvim-treesitter-refactor',
 'BurntSushi/ripgrep',
@@ -61,21 +63,6 @@ require('lazy').setup({
         'nvim-lua/plenary.nvim',
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },},
-{
-  "folke/noice.nvim",
-  event = "VeryLazy",
-  opts = {
-    -- add any options here
-  },
-  dependencies = {
-    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    "MunifTanjim/nui.nvim",
-    -- OPTIONAL:
-    --   `nvim-notify` is only needed, if you want to use the notification view.
-    --   If not available, we use `mini` as the fallback
-    "rcarriga/nvim-notify",
-    }
-},
 
   -- Git related plugins
   'tpope/vim-fugitive',

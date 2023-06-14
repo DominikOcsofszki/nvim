@@ -8,6 +8,6 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require('init-lazy')
-require('init-more-lazy')
+-- require('init-more-lazy')
 require('setup.init-setup')
 require('settings.init-settings')
