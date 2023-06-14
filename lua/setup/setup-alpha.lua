@@ -18,6 +18,7 @@ dashboard.section.buttons.val = {
     dashboard.button( "e", "  > New file" , ":ene <BAR> startinsert <CR>"),
     dashboard.button( "t", "  > Find file", ":cd `pwd`  | Telescope find_files<CR>"),
     dashboard.button( "c", "  > open HOME_CONFIG", ":cd $HOME_CONFIG  | :e .<CR>"),
+    dashboard.button( "n", "  > open HOME_CONFIG/nvim/lua", ":cd $HOME_CONFIG/nvim/lua  | :e .<CR>"),
     dashboard.button( "h", "  > Find file in home ", ":cd $HOME/ | Telescope find_files<CR>"),
     dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
     dashboard.button( "s", "  > Settings" , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
