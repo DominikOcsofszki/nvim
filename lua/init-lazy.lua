@@ -2,49 +2,49 @@
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
 if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system {
-		'git',
-		'clone',
-		'--filter=blob:none',
-		'https://github.com/folke/lazy.nvim.get',
-		'--branch=stable',
-		lazypath,
-	}
+  vim.fn.system {
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.get',
+    '--branch=stable',
+    lazypath,
+  }
 end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-
--- 'lervag/vimtex',
-{
-    "lervag/vimtex",
-    lazy=false
-    -- ft = "tex", -- without ft, it's not working too
-    -- config = function()
-    --   vim.cmd("call vimtex#init()")
-    -- end,
+  {
+    "cuducos/yaml.nvim",
+    ft = { "yaml" }, -- optional
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-telescope/telescope.nvim", -- optional
+    },
   },
+  -- {'iamcco/markdown-preview.nvim'},
+  {"lervag/vimtex",lazy=false},
   {"preservim/tagbar"},
   {},
   'rebelot/kanagawa.nvim',
-'edluffy/hologram.nvim',
-'nvim-treesitter/nvim-treesitter-refactor',
-'BurntSushi/ripgrep',
-'nvim-tree/nvim-tree.lua',
-'nvim-tree/nvim-web-devicons',
-'ThePrimeagen/vim-be-good',
-'nvim-lua/plenary.nvim',
-'ThePrimeagen/harpoon',
-'christoomey/vim-tmux-navigator',
-'junegunn/fzf.vim',
-    'folke/todo-comments.nvim',
--- Lua
-{'edluffy/hologram.nvim'},
-{"folke/zen-mode.nvim",
+  'edluffy/hologram.nvim',
+  'nvim-treesitter/nvim-treesitter-refactor',
+  'BurntSushi/ripgrep',
+  'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-web-devicons',
+  'ThePrimeagen/vim-be-good',
+  'nvim-lua/plenary.nvim',
+  'ThePrimeagen/harpoon',
+  'christoomey/vim-tmux-navigator',
+  'junegunn/fzf.vim',
+  'folke/todo-comments.nvim',
+  -- Lua
+  {'edluffy/hologram.nvim'},
+  {"folke/zen-mode.nvim",
     { "lukas-reineke/indent-blankline.nvim" },
-  opts = {  }},
- "luukvbaal/nnn.nvim",
- 'edluffy/hologram.nvim',
+    opts = {  }},
+  "luukvbaal/nnn.nvim",
+  'edluffy/hologram.nvim',
   {'goolord/alpha-nvim',
     dependencies = {'nvim-tree/nvim-web-devicons'}
     ,config = function ()
@@ -52,16 +52,16 @@ require('lazy').setup({
     end
   },
   'rebelot/kanagawa.nvim',
-'vimwiki/vimwiki',
+  'vimwiki/vimwiki',
 
-{ "rafamadriz/friendly-snippets" },
--- 'neovim/nvim-lspconfig',
+  { "rafamadriz/friendly-snippets" },
+  -- 'neovim/nvim-lspconfig',
 
-    {'akinsho/flutter-tools.nvim',
+  {'akinsho/flutter-tools.nvim',
     lazy = false,
     dependencies = {
-        'nvim-lua/plenary.nvim',
-        'stevearc/dressing.nvim', -- optional for vim.ui.select
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim', -- optional for vim.ui.select
     },},
 
   -- Git related plugins
@@ -69,7 +69,7 @@ require('lazy').setup({
   'tpope/vim-rhubarb',
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
-{ -- LSP Configuration & Plugins
+  { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
@@ -84,12 +84,12 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
----------------------------------------
+  ---------------------------------------
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   },
----------------------------------------
+  ---------------------------------------
   { -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
@@ -99,7 +99,7 @@ require('lazy').setup({
 
     end,
   },
-{ -- Add indentation guides even on blank lines
+  { -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
     opts = {
       char = '┊',
@@ -108,7 +108,7 @@ require('lazy').setup({
   },
 
   { 'folke/which-key.nvim', opts = {} },
- { -- Set lualine as statusline
+  { -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     opts = {
       options = {

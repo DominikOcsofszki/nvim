@@ -1,11 +1,14 @@
 
 vim.g.tex_flavor='latex'
 vim.g.vimtex_view_method='skim'
+  -- let g:vimtex_view_method = 'skim'
 -- nmap <localleader>v <plug>(vimtex-view)
 
 vim.keymap.set('n', '<leader>ovv', '<cmd>VimtexView<cr>', {})
 vim.keymap.set('n', '<leader>ovc', '<cmd>VimtexCompile<cr>', {})
 
+-- * |g:vimtex_view_skim_activate|
+-- * |g:vimtex_view_skim_reading_bar|
 
 -- vim.g.vimtex_quickfix_mode=0
 

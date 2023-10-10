@@ -20,7 +20,7 @@ vim.o.timeoutlen = 300
 vim.o.completeopt = 'menuone,noselect'
 vim.o.so = 15
 vim.o.tabstop = 4
-
+vim.g.python3_host_prog = "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3"
 
 
 
