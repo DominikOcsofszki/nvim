@@ -14,6 +14,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+{
+    'orfosys/nvim-soil',
+    lazy = true,
+    ft = "plantuml",
+    config = function()
+        -- If you want to change default configurations
+    end
+},
+  { 'nvim-lua/plenary.nvim' },
+  { 'ThePrimeagen/harpoon'},
+-- Optional for puml syntax highlighting:
+{ 'orfosys/nvim-nyctophilia' },
+
   {
     "cuducos/yaml.nvim",
     ft = { "yaml" }, -- optional
@@ -55,7 +68,6 @@ require('lazy').setup({
   'vimwiki/vimwiki',
 
   { "rafamadriz/friendly-snippets" },
-  -- 'neovim/nvim-lspconfig',
 
   {'akinsho/flutter-tools.nvim',
     lazy = false,

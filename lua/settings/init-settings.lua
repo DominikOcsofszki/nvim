@@ -1,3 +1,6 @@
+
+
+
 vim.o.termguicolors = true
 vim.o.number = true
 vim.o.hlsearch = true
@@ -16,8 +19,8 @@ vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
--- vim.o.completeopt = 'menuone,preview'
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = 'menuone,preview'
+-- vim.o.completeopt = 'menuone,noselect'
 vim.o.so = 15
 vim.o.tabstop = 4
 vim.g.python3_host_prog = "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3"
@@ -32,3 +35,4 @@ require('settings.new-keybindings')
 require('settings.key-remap')
 require('settings.vimtex')
 require('settings.when-exitVim')
+require('settings.extra-require')
