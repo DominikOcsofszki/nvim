@@ -14,6 +14,24 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+
+ {
+  'kristijanhusak/vim-dadbod-ui',
+  dependencies = {
+    { 'tpope/vim-dadbod', lazy = true },
+    { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
+  },
+  cmd = {
+    'DBUI',
+    'DBUIToggle',
+    'DBUIAddConnection',
+    'DBUIFindBuffer',
+  },
+  init = function()
+    -- Your DBUI configuration
+    vim.g.db_ui_use_nerd_fonts = 1
+  end,
+},
 {
     'orfosys/nvim-soil',
     lazy = true,
@@ -53,9 +71,9 @@ require('lazy').setup({
   'folke/todo-comments.nvim',
   -- Lua
   {'edluffy/hologram.nvim'},
-  {"folke/zen-mode.nvim",
-    { "lukas-reineke/indent-blankline.nvim" },
-    opts = {  }},
+  -- {"folke/zen-mode.nvim",
+  --   { "lukas-reineke/indent-blankline.nvim" },
+  --   opts = {  }},
   "luukvbaal/nnn.nvim",
   'edluffy/hologram.nvim',
   {'goolord/alpha-nvim',
@@ -111,13 +129,13 @@ require('lazy').setup({
 
     end,
   },
-  { -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
-  },
+  -- { -- Add indentation guides even on blank lines
+  --   'lukas-reineke/indent-blankline.nvim',
+  --   opts = {
+  --     char = '┊',
+  --     show_trailing_blankline_indent = false,
+  --   },
+  -- },
 
   { 'folke/which-key.nvim', opts = {} },
   { -- Set lualine as statusline
